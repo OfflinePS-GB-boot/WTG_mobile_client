@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/eventCardFragment">
+
+    <fragment
+        android:id="@+id/eventCardFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.event_card.EventCardFragment"
+        android:label="fragment_event_card"
+        tools:layout="@layout/fragment_event_card" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_eventCardFragment"
+            app:destination="@id/eventCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_locationCardFragment"
+            app:destination="@id/locationCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_routeCardFragment"
+            app:destination="@id/routeCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationCardFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.location_card.LocationCardFragment"
+        android:label="fragment_location_card"
+        tools:layout="@layout/fragment_location_card" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_topEventsFragment"
+            app:destination="@id/topEventsFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_topLocationsFragment"
+            app:destination="@id/topLocationsFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_routesFragment"
+            app:destination="@id/routesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_eventCardFragment"
+            app:destination="@id/eventCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_searchFragment_to_locationCardFragment"
+            app:destination="@id/locationCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_searchFragment_to_routeCardFragment"
+            app:destination="@id/routeCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/topEventsFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.top_events.TopEventsFragment"
+        android:label="fragment_top_events"
+        tools:layout="@layout/fragment_top_events" >
+        <action
+            android:id="@+id/action_topEventsFragment_to_eventCardFragment"
+            app:destination="@id/eventCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/topLocationsFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.top_locations.TopLocationsFragment"
+        android:label="fragment_top_locations"
+        tools:layout="@layout/fragment_top_locations" >
+        <action
+            android:id="@+id/action_topLocationsFragment_to_locationCardFragment"
+            app:destination="@id/locationCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/routesFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.routes.RoutesFragment"
+        android:label="fragment_routes"
+        tools:layout="@layout/fragment_routes" >
+        <action
+            android:id="@+id/action_routesFragment_to_routeCardFragment"
+            app:destination="@id/routeCardFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeCardFragment"
+        android:name="ru.sectorsj.wtg_mobile_client.ui.route_card.RouteCardFragment"
+        android:label="fragment_route_card"
+        tools:layout="@layout/fragment_route_card" />
+</navigation>
