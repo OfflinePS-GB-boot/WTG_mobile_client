@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         }, 5000)
     }
 
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
